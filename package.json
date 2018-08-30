@@ -1,0 +1,25 @@
+{
+  "name": "neo-sdk",
+  "version": "0.0.0",
+  "description": "Neo helper functions in js",
+  "main": "sdk.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/igormcoelho/neo-sdk-js.git"
+  },
+  "keywords": [
+    "neo-sdk"
+  ],
+  "author": "Igor M. Coelho (NeoResearch)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/igormcoelho/neo-sdk-js/issues"
+  },
+  "homepage": "https://github.com/igormcoelho/neo-sdk-js#readme",
+  "dependencies": {
+    "jest": "^23.5.0"
+  }
+}
