@@ -1,5 +1,5 @@
 {
-  "name": "eco-sdk",
+  "name": "neo-eco-sdk",
   "version": "0.1.0",
   "description": "Neo helper functions in js",
   "main": "sdk.js",
