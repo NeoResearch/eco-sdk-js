@@ -1,5 +1,5 @@
 {
-  "name": "neo-sdk",
+  "name": "eco-sdk",
   "version": "0.1.0",
   "description": "Neo helper functions in js",
   "main": "sdk.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/igormcoelho/neo-sdk-js.git"
+    "url": "git+ssh://git@github.com/neoresearch/eco-sdk-js.git"
   },
   "keywords": [
     "neo-sdk"
@@ -16,9 +16,9 @@
   "author": "Igor M. Coelho (NeoResearch)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/igormcoelho/neo-sdk-js/issues"
+    "url": "https://github.com/neoresearch/eco-sdk-js/issues"
   },
-  "homepage": "https://github.com/igormcoelho/neo-sdk-js#readme",
+  "homepage": "https://github.com/neoresearch/eco-sdk-js#readme",
   "dependencies": {
     "jest": "^23.5.0"
   }
