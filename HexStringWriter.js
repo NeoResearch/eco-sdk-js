@@ -7,8 +7,8 @@
 function HexStringWriter(hexstr = "", autopadding = true) {
 	this._autopadd = autopadding;
 	var hs = hexstr.toString();
-  if(this._autopadd && (hs.length % 2 == 1))
-	 	hs = '0'+hs; // add padding
+  if(this._autopadd)
+	 	hs = HexStringWriter.AddPadding(hs);
 	this._hexstr = hs;
 }
 
@@ -16,23 +16,29 @@ HexStringWriter._construct = function(hexstr) {
 	return new HexStringWriter(hexstr);
 };
 
+HexStringWriter.AddPadding = function(hexstr) {
+	if(hexstr.length % 2 == 1)
+		 return '0'+hexstr;
+	return hexstr;
+};
+
 // extracts real byte from hex string
 HexStringWriter.prototype.WriteByte=function(b = 0x00){
 	var sb = b.toString(16);
-	if(this._autopadd && (sb.length % 2 == 1))
-		sb = '0'+sb; // add padding
+	if(this._autopadd)
+		sb = HexStringWriter.AddPadding(sb);
 	this._hexstr += sb;
 }
 
 HexStringWriter.prototype.WriteHexString=function(hexstring = ""){
-	if(this._autopadd && (hexstring.length % 2 == 0))
-	  hexstring = "0"+hexstring;
+	if(this._autopadd)
+		hexstring = HexStringWriter.AddPadding(hexstring);
 	this._hexstr += hexstring;
 }
 
-HexStringWriter.prototype.WriteByteArray=function(bytearray = []){
+//HexStringWriter.prototype.WriteByteArray=function(bytearray = []){
 	//return ;//this.ReadBytes(1);
-}
+//}
 
 HexStringWriter.prototype.valueOf = function() {
 	return this._hexstr;

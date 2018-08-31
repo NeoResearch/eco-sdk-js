@@ -6,13 +6,17 @@
 
 function HexStringReader(hexstr) {
 	var hs = hexstr.toString();
-  if(hs.length % 2 == 1)
-	   hs = '0'+hs; // add padding
-	this._hexstr = hs;
+	this._hexstr =  HexStringReader.AddPadding(hs);
 }
 
 HexStringReader._construct = function(hexstr) {
 	return new HexStringReader(hexstr);
+};
+
+HexStringReader.AddPadding = function(hexstr) {
+	if(hexstr.length % 2 == 1)
+		 return '0'+hexstr;
+	return hexstr;
 };
 
 // extracts real byte from hex string
