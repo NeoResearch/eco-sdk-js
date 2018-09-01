@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/neoresearch/eco-sdk-js#readme",
   "dependencies": {
+    "csbiginteger": "^2.1.0",
     "jest": "^23.5.0"
   }
 }
